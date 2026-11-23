@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>System Design Interviewer</title>
+<meta name="description" content="Practise system design interviews out loud with an AI interviewer that pushes back, then get an honest review against the hiring bar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+  /* One column, a whiteboard-grid hero, then three short sections and the downloads. */
+  :root{
+    --bg:#f8f8f5; --panel:#ffffff; --ink:#16181d; --soft:#5a6070; --line:#e2e2dc;
+    --accent:#3b3fd8; --accent-ink:#ffffff; --grid:rgba(59,63,216,.07);
+    --display:"Fraunces",Georgia,serif; --body:"Inter",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --bg:#121317; --panel:#1b1d23; --ink:#ecedf1; --soft:#a0a6b4; --line:#2d3038;
+    --accent:#8f93ff; --accent-ink:#121317; --grid:rgba(143,147,255,.08); color-scheme:dark}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--body)}
+  .wrap{max-width:900px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left))}
+  header.top{display:flex;justify-content:space-between;align-items:center;padding-block:22px}
+  .brand{font:600 1.05rem var(--display)} .brand span{color:var(--accent)}
+  .top a{color:var(--soft);text-decoration:none;font-size:.95rem}
+  .hero{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:28px 28px;border-block:1px solid var(--line)}
+  .hero .wrap{padding-block:72px 64px;display:grid;gap:22px}
+  h1{font:600 clamp(2.2rem,5.5vw,3.6rem)/1.08 var(--display);margin:0;max-width:16ch;text-wrap:balance}
+  .lede{font-size:1.18rem;color:var(--soft);max-width:56ch;margin:0}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:10px;font-weight:600;text-decoration:none;
+    border:1.5px solid var(--accent)}
+  .btn.primary{background:var(--accent);color:var(--accent-ink)} .btn.ghost{color:var(--accent)}
+  .btn small{font:400 .78rem var(--mono);opacity:.8}
+  .quote{font:400 .92rem var(--mono);color:var(--soft);background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;max-width:560px;display:grid;gap:6px}
+  .quote b{color:var(--ink);font-weight:500}
+  section{padding-block:56px;border-bottom:1px solid var(--line)}
+  h2{font:600 1.7rem var(--display);margin:0 0 22px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+  .steps h3{margin:0 0 6px;font-size:1.02rem} .steps p{margin:0;color:var(--soft)}
+  .steps .n{font:400 .8rem var(--mono);color:var(--accent);display:block;margin-bottom:6px}
+  .dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:10px;align-content:start}
+  .card h3{margin:0;font-size:1.1rem} .card p{margin:0;color:var(--soft);font-size:.95rem}
+  code{font:.85em var(--mono);background:var(--grid);padding:2px 6px;border-radius:5px;word-break:break-all}
+  ul.req{margin:0;padding-left:20px;color:var(--soft)} ul.req li{margin-bottom:6px}
+  footer{padding-block:32px;color:var(--soft);font-size:.9rem}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <div class="brand">System Design <span>Interviewer</span></div>
+  <a href="#download">Download</a>
+</header>
+
+<div class="hero"><div class="wrap">
+  <h1>Practise system design interviews out loud.</h1>
+  <p class="lede">A 35-minute mock with an AI interviewer who listens, asks the follow-up a senior engineer would, and lets a weak answer pass only when it holds up. Then an honest review against the hiring bar, and the next mock picked for you.</p>
+  <div class="ctas">
+    <a class="btn primary" href="#download">Download for free <small>Windows Â· Mac</small></a>
+  </div>
+  <div class="quote" aria-label="An example exchange">
+    <span>You: "â€¦and consistent hashing handles which keys move."</span>
+    <span><b>Interviewer:</b> "Okay, virtual nodes spread things out. When that fifty-first node joins, about what share of the keys end up moving?"</span>
+  </div>
+</div></div>
+
+<main class="wrap">
+  <section>
+    <h2>How a session goes</h2>
+    <div class="steps">
+      <div><span class="n">35 minutes</span><h3>Interview</h3><p>Talk through a real problem (URL shortener, Ticketmaster, Uber and seven more) while you draw on a shared whiteboard. Pick a warm, neutral or skeptical interviewer.</p></div>
+      <div><span class="n">Right after</span><h3>Review</h3><p>A verdict against the bar for your level, the moments that decided it, quoted from what you said, and what a stronger answer sounds like.</p></div>
+      <div><span class="n">Next time</span><h3>Improve</h3><p>A short quiz built from your own misses, and the next mock chosen to hit your weakest area.</p></div>
+    </div>
+  </section>
+
+  <section id="download">
+    <h2>Download</h2>
+    <div class="dl">
+      <div class="card">
+        <h3>Windows</h3>
+        <p>Windows 10 or 11, 64-bit. About 250 MB, plus the voice models on first start.</p>
+        <a class="btn primary" href="https://github.com/AntVo/sdi-downloads/releases/latest/download/System-Design-Interviewer-Setup.exe">Download for Windows</a>
+        <p>Windows may say it protected your PC: click <b>More info</b>, then <b>Run anyway</b>.</p>
+      </div>
+      <div class="card">
+        <h3>Mac (Apple Silicon)</h3>
+        <p>M1 or newer. Open the file and drag the app to Applications.</p>
+        <a class="btn primary" href="https://github.com/AntVo/sdi-downloads/releases/latest/download/System-Design-Interviewer-mac-arm64.dmg">Download for Mac</a>
+        <p>This early build isn't signed yet. After copying it, run this once in Terminal:<br><code>xattr -cr "/Applications/System Design Interviewer.app"</code></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What you need</h2>
+    <ul class="req">
+      <li><b>Your own AI.</b> Install <a href="https://docs.anthropic.com/en/docs/claude-code/setup">Claude Code</a> and sign in with your Claude plan, or paste an Anthropic, OpenAI or Gemini API key in Settings.</li>
+      <li><b>A microphone.</b> Speech recognition and the interviewer's voice run on your computer; your audio isn't sent anywhere.</li>
+      <li><b>About 2 GB of disk</b> for the app and its voice models.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">Early preview for testers. Found something off? Tell us what the interviewer said and what it should have said.</footer>
+</body>
+</html>
